@@ -517,12 +517,9 @@ th {
    TPCA Moodle App - Catalog Cleanup
    ========================================================= */
 
-* {
-  color: inherit !important;
-  border: none !important;
-  box-shadow: none !important;
-}
 core-courses,
-core-courses * {
-  border: 2px solid red !important;
+core-courses *,
+.page-core-courses,
+.page-core-courses * {
+  outline: 2px solid red !important;
 }
