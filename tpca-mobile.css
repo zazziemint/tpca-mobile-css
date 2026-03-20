@@ -517,6 +517,6 @@ th {
    TPCA Moodle App - Catalog Cleanup
    ========================================================= */
 
-ion-searchbar {
+ion-item {
   border: 3px solid red !important;
 }
