@@ -517,9 +517,6 @@ th {
    TPCA Moodle App - Catalog Cleanup
    ========================================================= */
 
-core-courses,
-core-courses *,
-.page-core-courses,
-.page-core-courses * {
+[class*="mm-site"] {
   outline: 2px solid red !important;
 }
