@@ -337,3 +337,58 @@ input::placeholder,
 textarea::placeholder {
   color: var(--tpca-muted) !important;
 }
+/* =========================================================
+   FORCE ALL TEXT GREEN (CONTROLLED)
+   ========================================================= */
+
+/* Step 1: Make all text green */
+body,
+ion-content,
+ion-content *,
+p,
+span,
+div,
+label,
+ion-label,
+a,
+li,
+td,
+th,
+small,
+h1, h2, h3, h4, h5, h6,
+strong,
+b {
+  color: var(--tpca-green) !important;
+}
+
+/* ---------------------------------------------------------
+   Step 2: OVERRIDES (keep things usable)
+   --------------------------------------------------------- */
+
+/* Buttons with green background → white text */
+ion-button.button-solid,
+.btn-primary,
+button[type="submit"] {
+  color: #ffffff !important;
+}
+
+ion-button.button-solid *,
+.btn-primary *,
+button[type="submit"] * {
+  color: #ffffff !important;
+}
+
+/* Inputs should stay readable (not green) */
+input,
+textarea,
+select,
+ion-input,
+ion-textarea {
+  color: var(--tpca-text) !important;
+}
+
+/* Placeholder text stays muted */
+input::placeholder,
+textarea::placeholder {
+  color: var(--tpca-muted) !important;
+}
