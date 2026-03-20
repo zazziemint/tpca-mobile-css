@@ -513,3 +513,122 @@ th {
 [style*="rgb(45, 105, 83)"] {
     color: var(--tpca-white) !important;
 }
+/* =========================================================
+   TPCA Moodle App - Catalog Cleanup
+   ========================================================= */
+
+/* --- Top header / banner --- */
+.toolbar,
+ion-header,
+.header-background,
+ion-toolbar {
+  --background: #e9ecef !important;
+  background: #e9ecef !important;
+  border-bottom: 1px solid #d7dbe0 !important;
+}
+
+/* Make title/header area blend cleanly */
+ion-header *,
+.toolbar * {
+  box-shadow: none !important;
+}
+
+/* --- Profile initials circle --- */
+ion-avatar,
+.avatar,
+.useravatar,
+.initials,
+.core-login-profileimg,
+img.userpicture,
+span.initials {
+  border-radius: 50% !important;
+}
+
+span.initials,
+.initials,
+.avatar .initials {
+  background: #2f6f57 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* --- Search area outer box --- */
+ion-searchbar,
+.searchbar,
+.core-course-searchbar,
+.core-courses-search-box {
+  --background: #ffffff !important;
+  background: #ffffff !important;
+  border: 1px solid #cfd6dc !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Remove the awkward inner outline */
+ion-searchbar .searchbar-input-container,
+ion-searchbar .searchbar-input,
+.searchbar-input-container,
+.searchbar-input {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Keep text area clean */
+ion-searchbar input,
+.searchbar-input {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+/* --- Category dropdown wrapper --- */
+ion-select,
+select,
+.core-dropdown-menu,
+.core-courses-categoryselect,
+.mat-mdc-select,
+.form-control {
+  background: #ffffff !important;
+  border: 1px solid #cfd6dc !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  min-height: 44px !important;
+}
+
+/* Remove inner/floating look from dropdown trigger */
+ion-select::part(text),
+ion-select::part(icon),
+ion-select::part(container) {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* If Moodle app wraps the dropdown in another container */
+.core-courses-categoryselect,
+.core-dropdown-menu,
+.item-native,
+.select-interface-option {
+  box-shadow: none !important;
+}
+
+/* --- General card cleanup so fields feel embedded --- */
+ion-card,
+.card,
+.core-course-listitem,
+.core-block-course,
+.list-item,
+ion-item {
+  border-radius: 18px !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
+}
+
+/* Make filter/search region feel unified */
+.core-courses-search,
+.core-courses-filters,
+.catalog-filters,
+.course-search-widget {
+  background: transparent !important;
+  box-shadow: none !important;
+}
