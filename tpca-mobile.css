@@ -1,522 +1,281 @@
-:root {
-    --tpca-green: #2D6953;
-    --tpca-gold: #E6B640;
-    --tpca-slate: #23323A;
-    --tpca-bg: #F5F7FA;
-    --tpca-gray: #A7B1B7;
-    --tpca-white: #FFFFFF;
-    --tpca-white-soft: #F5F7FA;
-
-    --core-primary: #2D6953;
-    --core-header-toolbar-background: #2D6953;
-    --core-header-toolbar-text-color: #FFFFFF;
-}
-
-/* =========================================
-   Global background + text
-========================================= */
-html,
-body,
-ion-app,
-ion-content,
-.core-page,
-.main-inner,
-ion-menu,
-ion-list,
-ion-item,
-.item,
-.list,
-.card,
-ion-card,
-ion-card-content {
-    background: var(--tpca-bg) !important;
-    color: var(--tpca-green) !important;
-}
-
-/* Main readable content blocks stay white */
-ion-card,
-.card,
-.core-card,
-.list-card,
-.course-card,
-.core-block-content,
-.core-course-listitem,
-.core-coursemodule,
-.core-login-methods,
-.core-login-form,
-.core-login-site-form,
-.core-login-site-selector,
-.core-login-identityproviders,
-.core-login-reconnect,
-.core-login-confirm {
-    background: var(--tpca-white) !important;
-    color: var(--tpca-green) !important;
-    border-radius: 12px !important;
-    border: 1px solid rgba(45, 105, 83, 0.18) !important;
-    box-shadow: 0 3px 10px rgba(35, 50, 58, 0.08) !important;
-}
-
-/* Global text rule */
-p,
-span,
-div,
-label,
-small,
-strong,
-b,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ion-label,
-.item-inner,
-.item-native,
-.core-format-text,
-.core-rich-text-editor,
-.core-login-site-info,
-.core-course-title,
-.core-course-fullname,
-.core-course-summary,
-.core-user-profile,
-.core-user-profile-field,
-.core-user-availabilityinfo {
-    color: var(--tpca-green) !important;
-}
-
-/* Secondary / muted text */
-.text-muted,
-.medium,
-.note,
-.secondary,
-.core-login-site-description,
-.core-course-progress-text,
-.core-user-profile-subtitle {
-    color: var(--tpca-gray) !important;
-}
-
-/* Selected text behavior stays native-bold where app applies it */
-ion-label.label-selected,
-.item-radio-checked ion-label,
-.item-checkbox-checked ion-label,
-ion-segment-button.segment-button-checked,
-ion-tab-button.tab-selected,
-[aria-selected="true"] {
-    font-weight: 700 !important;
-}
-
-/* =========================================
-   Header / top toolbar
-========================================= */
-ion-header,
-ion-toolbar,
-.toolbar,
-.core-navbar,
-.header-ios ion-toolbar,
-.header-md ion-toolbar {
-    --background: var(--tpca-green) !important;
-    background: var(--tpca-green) !important;
-    color: var(--tpca-white) !important;
-    border: none !important;
-}
-
-ion-header *,
-ion-toolbar *,
-.toolbar *,
-.core-navbar * {
-    color: var(--tpca-white) !important;
-}
-
-/* Upper-corner help/question icon */
-ion-header ion-icon,
-ion-toolbar ion-icon,
-.toolbar ion-icon,
-.core-navbar ion-icon,
-ion-header .icon,
-ion-toolbar .icon {
-    color: var(--tpca-green) !important;
-    fill: var(--tpca-green) !important;
-}
-
-/* If icon sits on green header, keep it white */
-ion-header button ion-icon,
-ion-toolbar button ion-icon,
-ion-header .button ion-icon,
-ion-toolbar .button ion-icon {
-    color: var(--tpca-white) !important;
-    fill: var(--tpca-white) !important;
-}
-
-/* =========================================
-   Links
-========================================= */
-a,
-a:link,
-a:visited,
-.core-link,
-ion-item a,
-.core-anchor {
-    color: var(--tpca-green) !important;
-    text-decoration: none !important;
-}
-
-a:hover,
-a:focus,
-a:active {
-    color: var(--tpca-green) !important;
-    text-decoration: none !important;
-}
-
-/* Keep green underline behavior where app applies it */
-ion-segment-button.segment-button-checked,
-ion-tab-button.tab-selected,
-.item-radio-checked,
-.item-checkbox-checked {
-    border-color: var(--tpca-green) !important;
-}
-
-/* =========================================
-   Buttons
-   Rule: green background => white text
-========================================= */
-button,
-.btn,
-.btn-primary,
-.core-button,
-ion-button,
-ion-button.button,
-.button,
-.button-solid,
-.button-md,
-.button-ios,
-input[type="button"],
-input[type="submit"] {
-    --background: var(--tpca-green) !important;
-    --color: var(--tpca-white) !important;
-    background: var(--tpca-green) !important;
-    color: var(--tpca-white) !important;
-    border: 1px solid var(--tpca-green) !important;
-    border-radius: 10px !important;
-    box-shadow: none !important;
-}
-
-button *,
-.btn *,
-.core-button *,
-ion-button *,
-.button *,
-input[type="button"] *,
-input[type="submit"] * {
-    color: var(--tpca-white) !important;
-}
-
-/* Selected buttons keep native bolding feel */
-button:active,
-button:focus,
-button[aria-pressed="true"],
-.btn:active,
-.btn:focus,
-.core-button:active,
-.core-button:focus,
-ion-button:active,
-ion-button:focus,
-.button:active,
-.button:focus {
-    font-weight: 700 !important;
-}
-
-/* =========================================
-   Icons
-========================================= */
-ion-icon,
-i,
-.icon,
-.core-icon,
-.fa,
-svg {
-    color: var(--tpca-green) !important;
-    fill: var(--tpca-green) !important;
-}
-
-/* Icons inside green buttons stay white */
-button ion-icon,
-.btn ion-icon,
-.core-button ion-icon,
-ion-button ion-icon,
-.button ion-icon,
-button i,
-.btn i,
-.core-button i,
-ion-button i,
-.button i,
-button svg,
-.btn svg,
-.core-button svg,
-ion-button svg,
-.button svg {
-    color: var(--tpca-white) !important;
-    fill: var(--tpca-white) !important;
-}
-
-/* =========================================
-   Inputs / fields
-========================================= */
-input,
-textarea,
-select,
-ion-input,
-ion-textarea,
-ion-select,
-.item-input,
-.native-input,
-.text-input,
-.core-input,
-.core-textarea,
-.core-select {
-    color: var(--tpca-green) !important;
-}
-
-input,
-textarea,
-select,
-.item-input,
-.native-input,
-.text-input,
-.core-input,
-.core-textarea,
-.core-select,
-ion-item.item-input,
-ion-item.item-select {
-    background: var(--tpca-white) !important;
-    border: 1px solid var(--tpca-green) !important;
-    border-radius: 10px !important;
-    box-shadow: none !important;
-}
-
-/* Input placeholders */
-input::placeholder,
-textarea::placeholder {
-    color: var(--tpca-green) !important;
-    opacity: 0.75 !important;
-}
-
-/* Focus state */
-input:focus,
-textarea:focus,
-select:focus,
-.item-input.item-input-has-focus,
-.item-input-has-focus .item-native {
-    border-color: var(--tpca-green) !important;
-    box-shadow: 0 0 0 1px var(--tpca-green) !important;
-}
-
-/* =========================================
-   Login screen
-========================================= */
-.core-login-site-form,
-.core-login-form,
-.core-login-methods,
-.core-login-site-selector,
-.core-login-identityproviders,
-.core-login-reconnect,
-.core-login-confirm,
-.core-login-site-info,
-.core-login-forgotten-password {
-    color: var(--tpca-green) !important;
-}
-
-.core-login-site-form input,
-.core-login-form input,
-.core-login-site-form textarea,
-.core-login-form textarea,
-.core-login-site-form select,
-.core-login-form select {
-    background: var(--tpca-white) !important;
-    color: var(--tpca-green) !important;
-    border: 1px solid var(--tpca-green) !important;
-    border-radius: 10px !important;
-}
-
-/* Login button */
-.core-login-form button,
-.core-login-site-form button,
-.core-login-form .button,
-.core-login-site-form .button,
-.core-login-form ion-button,
-.core-login-site-form ion-button,
-.core-login-form input[type="submit"],
-.core-login-site-form input[type="submit"] {
-    background: var(--tpca-green) !important;
-    color: var(--tpca-white) !important;
-    border: 1px solid var(--tpca-green) !important;
-}
-
-/* Eye icon for password visibility */
-.core-login-form ion-icon,
-.core-login-site-form ion-icon,
-.core-login-form .icon,
-.core-login-site-form .icon,
-.core-login-form .password-toggle,
-.core-login-site-form .password-toggle {
-    color: var(--tpca-green) !important;
-    fill: var(--tpca-green) !important;
-}
-
-/* =========================================
-   Bottom navigation / tabs
-========================================= */
-ion-tab-bar,
-.tabbar,
-.tabs,
-.footer,
-ion-footer {
-    background: var(--tpca-bg) !important;
-    border-top: 1px solid rgba(45, 105, 83, 0.15) !important;
-}
-
-ion-tab-button,
-ion-segment-button,
-.tab-button,
-.tab-button-icon,
-.tab-button-text {
-    color: var(--tpca-slate) !important;
-}
-
-/* Selected bottom nav item */
-ion-tab-button.tab-selected,
-ion-tab-button.tab-selected ion-icon,
-ion-tab-button.tab-selected .tab-button-icon,
-ion-tab-button.tab-selected .tab-button-text,
-ion-segment-button.segment-button-checked {
-    color: var(--tpca-green) !important;
-    fill: var(--tpca-green) !important;
-    font-weight: 700 !important;
-}
-
-/* =========================================
-   User profile avatar circle
-========================================= */
-.core-user-profile .avatar,
-.core-user-profile img.avatar,
-.core-avatar,
-.core-avatar-container,
-.user-avatar,
-.initials,
-.avatar,
-ion-avatar {
-    background: var(--tpca-green) !important;
-    color: var(--tpca-white) !important;
-    border-radius: 50% !important;
-}
-
-.core-user-profile .avatar *,
-.core-avatar *,
-.user-avatar *,
-.initials *,
-.avatar *,
-ion-avatar * {
-    color: var(--tpca-white) !important;
-}
-
-/* =========================================
-   User account menu items
-   Grades / Reports / Preferences
-========================================= */
-.core-user-menu,
-.core-user-profile,
-.core-user-profile-content,
-.core-user-profile-field,
-.core-user-profile-field ion-label,
-.core-user-profile-field .item-native,
-.core-user-profile-field .item-inner,
-.core-user-profile-field .icon,
-.core-user-profile-field ion-icon,
-.core-user-profile .item,
-.core-user-profile .item *,
-.core-user-profile .list *,
-.core-moremenu *,
-.core-block-content .item *,
-ion-item.core-user-profile-field * {
-    color: var(--tpca-green) !important;
-    fill: var(--tpca-green) !important;
-}
-
-/* =========================================
-   My Courses dropdown
-========================================= */
-/* Closed state should look like green button */
-.core-courses-courses .item-select,
-.core-courses-courses select,
-.core-course-option,
-.core-course-selector,
-.core-courses-filter select,
-.core-courses-filter .item-native,
-.core-courses-filter ion-select,
-.core-myoverview select,
-.core-myoverview ion-select {
-    background: var(--tpca-green) !important;
-    color: var(--tpca-white) !important;
-    border: 1px solid var(--tpca-green) !important;
-    border-radius: 10px !important;
-}
-
-/* Dropdown text/icon in closed state */
-.core-courses-courses .item-select *,
-.core-courses-courses select *,
-.core-course-option *,
-.core-course-selector *,
-.core-courses-filter select *,
-.core-courses-filter ion-select *,
-.core-myoverview select *,
-.core-myoverview ion-select * {
-    color: var(--tpca-white) !important;
-    fill: var(--tpca-white) !important;
-}
-
-/* Open-state list items readable and green */
-.alert-radio-label,
-.alert-checkbox-label,
-.select-interface-option,
-ion-select-option,
-.alert-wrapper,
-.alert-message,
-.alert-title,
-.alert-sub-title {
-    color: var(--tpca-green) !important;
-}
-
-/* Keep native bold/highlight behavior for selected dropdown items */
-.alert-radio-button[aria-checked="true"] .alert-radio-label,
-.alert-checkbox-button[aria-checked="true"] .alert-checkbox-label,
-.select-interface-option[aria-selected="true"] {
-    font-weight: 700 !important;
-}
-
-/* =========================================
-   Tables / report-like rows
-========================================= */
-table,
-thead,
-tbody,
-tr,
-td,
-th {
-    color: var(--tpca-green) !important;
-    border-color: rgba(45, 105, 83, 0.15) !important;
-}
-
-/* =========================================
-   Keep white text on anything explicitly green
-========================================= */
-[style*="#2D6953"],
-[style*="rgb(45, 105, 83)"] {
-    color: var(--tpca-white) !important;
-}
 /* =========================================================
-   TPCA Moodle App - Catalog Cleanup
+   TPCA Moodle App Mobile CSS
+   Clean Professional Baseline
    ========================================================= */
 
-[class*="mm-site"] {
-  outline: 2px solid red !important;
+/* ---------------------------------------------------------
+   BRAND TOKENS
+   --------------------------------------------------------- */
+:root {
+  --tpca-green: #2f6f57;
+  --tpca-green-dark: #275c49;
+  --tpca-text: #1f2a24;
+  --tpca-muted: #5f6b65;
+  --tpca-bg-light: #f4f5f6;
+  --tpca-surface: #ffffff;
+  --tpca-border: #d6dadd;
+  --tpca-border-soft: #e3e6e8;
+}
+
+/* ---------------------------------------------------------
+   GLOBAL RESET / CLEANUP
+   --------------------------------------------------------- */
+* {
+  box-shadow: none !important;
+}
+
+ion-content,
+ion-content::part(background),
+body,
+.main-content,
+.main-inner {
+  background: var(--tpca-bg-light) !important;
+  color: var(--tpca-text) !important;
+}
+
+/* ---------------------------------------------------------
+   HEADER / TOP BAR
+   Keep light so logo stays visible
+   --------------------------------------------------------- */
+ion-header,
+ion-toolbar,
+ion-header ion-toolbar {
+  --background: var(--tpca-bg-light) !important;
+  --color: var(--tpca-text) !important;
+  background: var(--tpca-bg-light) !important;
+  color: var(--tpca-text) !important;
+  border-bottom: 1px solid var(--tpca-border-soft) !important;
+  box-shadow: none !important;
+}
+
+/* Header icons */
+ion-header ion-icon,
+ion-toolbar ion-icon,
+ion-buttons ion-icon {
+  color: var(--tpca-green) !important;
+}
+
+/* ---------------------------------------------------------
+   TEXT / LINKS / ICONS
+   --------------------------------------------------------- */
+a,
+.text-primary,
+.core-link,
+.core-icon,
+ion-icon {
+  color: var(--tpca-green) !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+strong,
+b {
+  color: var(--tpca-text) !important;
+}
+
+/* Muted helper text */
+small,
+.text-muted,
+.dimmed-text,
+.note {
+  color: var(--tpca-muted) !important;
+}
+
+/* ---------------------------------------------------------
+   CARDS / CONTENT BLOCKS
+   Keep sleek and flat
+   --------------------------------------------------------- */
+ion-card,
+.card,
+.core-course-listitem,
+.list-item,
+.core-block-content,
+.core-course-summaryitem,
+ion-item {
+  background: var(--tpca-surface) !important;
+  border: 1px solid var(--tpca-border-soft) !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+}
+
+/* Reduce inner lines in Ionic items */
+ion-item {
+  --background: var(--tpca-surface) !important;
+  --inner-border-width: 0 !important;
+  --border-width: 0 !important;
+  --highlight-height: 0 !important;
+}
+
+/* ---------------------------------------------------------
+   BUTTONS
+   Keep subtle and branded
+   --------------------------------------------------------- */
+ion-button,
+.btn,
+button.button,
+button {
+  --box-shadow: none !important;
+  box-shadow: none !important;
+  border-radius: 10px !important;
+}
+
+/* Primary-style buttons */
+ion-button.button-solid,
+.btn-primary,
+button[type="submit"] {
+  --background: var(--tpca-green) !important;
+  --color: #ffffff !important;
+  background: var(--tpca-green) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+/* Outline / secondary feel */
+ion-button.button-outline,
+.btn-outline,
+.button-clear {
+  --color: var(--tpca-green) !important;
+  color: var(--tpca-green) !important;
+  border-color: var(--tpca-green) !important;
+}
+
+/* ---------------------------------------------------------
+   SEARCH / INPUT AREAS
+   Minimal, clean, one-box feel where supported
+   --------------------------------------------------------- */
+ion-searchbar {
+  --background: var(--tpca-surface) !important;
+  --border-radius: 12px !important;
+  --box-shadow: none !important;
+  background: var(--tpca-surface) !important;
+  border: 1px solid var(--tpca-border) !important;
+  border-radius: 12px !important;
+  padding: 0 !important;
+}
+
+ion-searchbar::part(container) {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+ion-searchbar::part(input) {
+  color: var(--tpca-text) !important;
+}
+
+/* Generic inputs */
+ion-input,
+ion-textarea,
+input,
+textarea {
+  --background: var(--tpca-surface) !important;
+  background: var(--tpca-surface) !important;
+  color: var(--tpca-text) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+/* Placeholder text */
+input::placeholder,
+textarea::placeholder {
+  color: var(--tpca-muted) !important;
+  opacity: 1 !important;
+}
+
+/* ---------------------------------------------------------
+   SELECTS / DROPDOWNS
+   Keep mostly native, just cleaner
+   --------------------------------------------------------- */
+ion-select,
+select {
+  --background: var(--tpca-surface) !important;
+  background: var(--tpca-surface) !important;
+  color: var(--tpca-text) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+/* ---------------------------------------------------------
+   AVATAR / USER INITIALS
+   --------------------------------------------------------- */
+ion-avatar {
+  background: var(--tpca-green) !important;
+  border-radius: 50% !important;
+}
+
+.initials,
+.userinitials,
+.avatar-initials,
+span.initials {
+  background: var(--tpca-green) !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  font-weight: 600 !important;
+}
+
+/* ---------------------------------------------------------
+   COURSE LIST / CATALOG
+   Keep text clean and readable
+   --------------------------------------------------------- */
+.core-course-title,
+.course-title,
+h2.item-heading,
+h3.item-heading {
+  color: var(--tpca-text) !important;
+  font-weight: 600 !important;
+}
+
+.core-course-summary,
+.course-summary,
+.item-text-wrap,
+ion-label p {
+  color: var(--tpca-muted) !important;
+}
+
+/* ---------------------------------------------------------
+   TABS / NAV AREAS
+   --------------------------------------------------------- */
+ion-tab-bar,
+ion-footer,
+ion-tab-button {
+  --background: var(--tpca-surface) !important;
+  background: var(--tpca-surface) !important;
+  border-top: 1px solid var(--tpca-border-soft) !important;
+  box-shadow: none !important;
+}
+
+ion-tab-button {
+  --color: var(--tpca-muted) !important;
+  --color-selected: var(--tpca-green) !important;
+}
+
+/* ---------------------------------------------------------
+   LOGIN SCREEN
+   Keep clean and readable
+   --------------------------------------------------------- */
+form,
+.loginform,
+.auth-form,
+.core-login-form {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+label,
+ion-label {
+  color: var(--tpca-text) !important;
+}
+
+/* ---------------------------------------------------------
+   SAFETY NET
+   Remove surprise shadows and harsh outlines
+   --------------------------------------------------------- */
+.card,
+ion-card,
+ion-item,
+ion-searchbar,
+ion-select,
+input,
+textarea,
+button {
+  box-shadow: none !important;
 }
