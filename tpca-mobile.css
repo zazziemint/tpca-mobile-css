@@ -566,3 +566,53 @@ textarea::placeholder {
   margin-left: 0.35rem !important;
   border-top-color: var(--tpca-green) !important;
 }
+
+/* =========================================================
+   MY COURSES DROPDOWN FINAL POLISH
+   ========================================================= */
+
+/* Force green text inside dropdown menus */
+.mycourses-filter .dropdown-menu .dropdown-item,
+.mycourses-sort .dropdown-menu .dropdown-item,
+.dropdown-menu .dropdown-item {
+  color: var(--tpca-green) !important;
+}
+
+/* Keep hover/focus text green */
+.mycourses-filter .dropdown-menu .dropdown-item:hover,
+.mycourses-sort .dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:hover,
+.mycourses-filter .dropdown-menu .dropdown-item:focus,
+.mycourses-sort .dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:focus {
+  color: var(--tpca-green) !important;
+}
+
+/* Clean unified rounded box for All/Completed button */
+#mycourses-filter-dropdown,
+#mycourses-filter-dropdown.btn,
+#mycourses-filter-dropdown.btn-outline-secondary,
+#mycourses-filter-dropdown.dropdown-toggle {
+  background: var(--tpca-surface) !important;
+  color: var(--tpca-green) !important;
+
+  border-top: 1px solid var(--tpca-border-soft) !important;
+  border-bottom: 1px solid var(--tpca-border-soft) !important;
+
+  /* remove side cut lines */
+  border-left: none !important;
+  border-right: none !important;
+
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  outline: none !important;
+
+  overflow: hidden !important;
+}
+
+/* Text + arrow inside button */
+#mycourses-filter-dropdown span,
+#mycourses-filter-dropdown::after {
+  color: var(--tpca-green) !important;
+  border-top-color: var(--tpca-green) !important;
+}
