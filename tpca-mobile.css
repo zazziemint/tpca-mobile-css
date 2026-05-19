@@ -616,3 +616,58 @@ textarea::placeholder {
   color: var(--tpca-green) !important;
   border-top-color: var(--tpca-green) !important;
 }
+
+/* =========================================================
+   MY COURSES DROPDOWN HARD OVERRIDE
+   Targets Bootstrap dropdown text + filter button border
+   ========================================================= */
+
+/* Force dropdown item text green */
+.dropdown-menu.show a.dropdown-item,
+.dropdown-menu.show .dropdown-item,
+.dropdown-menu.show .dropdown-item *,
+ul.dropdown-menu.show a,
+ul.dropdown-menu.show a *,
+ul.dropdown-menu.show li,
+ul.dropdown-menu.show li * {
+  color: var(--tpca-green) !important;
+}
+
+/* Keep selected/hover item green */
+.dropdown-menu.show a.dropdown-item:hover,
+.dropdown-menu.show a.dropdown-item:focus,
+.dropdown-menu.show a.dropdown-item.active {
+  color: var(--tpca-green) !important;
+  background-color: var(--tpca-bg-light) !important;
+}
+
+/* Force complete closed border around My Courses filter button */
+button#mycourses-filter-dropdown {
+  border: 1px solid var(--tpca-border-soft) !important;
+  border-radius: 12px !important;
+  background: var(--tpca-surface) !important;
+  color: var(--tpca-green) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Prevent any previous rules from removing side borders */
+button#mycourses-filter-dropdown.btn,
+button#mycourses-filter-dropdown.btn-outline-secondary,
+button#mycourses-filter-dropdown.dropdown-toggle,
+button#mycourses-filter-dropdown.show {
+  border-left: 1px solid var(--tpca-border-soft) !important;
+  border-right: 1px solid var(--tpca-border-soft) !important;
+  border-top: 1px solid var(--tpca-border-soft) !important;
+  border-bottom: 1px solid var(--tpca-border-soft) !important;
+}
+
+/* Text and arrow inside the button */
+button#mycourses-filter-dropdown span,
+button#mycourses-filter-dropdown [data-active-item-text] {
+  color: var(--tpca-green) !important;
+}
+
+button#mycourses-filter-dropdown.dropdown-toggle::after {
+  border-top-color: var(--tpca-green) !important;
+}
