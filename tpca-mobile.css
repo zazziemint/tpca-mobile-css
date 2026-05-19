@@ -347,3 +347,28 @@ input::placeholder,
 textarea::placeholder {
   color: var(--tpca-muted) !important;
 }
+/* =========================================================
+   DROPDOWN EDGE FIX
+   ========================================================= */
+
+.core-courses-courses .item-select,
+.core-courses-filter .item-native,
+.core-myoverview ion-select,
+ion-item.item-select {
+  overflow: hidden !important;
+  border-radius: 12px !important;
+}
+
+.core-courses-courses .item-inner,
+.core-courses-filter .item-inner,
+ion-item.item-select .item-inner {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.core-courses-courses .item-native,
+.core-courses-filter .item-native,
+ion-item.item-select .item-native {
+  border-left: none !important;
+  border-right: none !important;
+}
