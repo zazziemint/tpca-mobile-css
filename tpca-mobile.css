@@ -671,3 +671,26 @@ button#mycourses-filter-dropdown [data-active-item-text] {
 button#mycourses-filter-dropdown.dropdown-toggle::after {
   border-top-color: var(--tpca-green) !important;
 }
+
+/* =========================================================
+   RESET MOODLE MY COURSES FILTER BUTTON TO DEFAULT SHAPE
+   Prevent global TPCA button styling from clipping dropdown
+   ========================================================= */
+
+#mycourses-filter-dropdown,
+.mycourses-filter .dropdown-toggle,
+.mycourses-sort .dropdown-toggle {
+  border-radius: var(--bs-border-radius, 0.375rem) !important;
+  overflow: visible !important;
+  background-clip: border-box !important;
+}
+
+/* Let Bootstrap control the outline button border */
+#mycourses-filter-dropdown.btn-outline-secondary,
+.mycourses-filter .btn-outline-secondary,
+.mycourses-sort .btn-outline-secondary {
+  border-left-width: 1px !important;
+  border-right-width: 1px !important;
+  border-top-width: 1px !important;
+  border-bottom-width: 1px !important;
+}
