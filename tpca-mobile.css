@@ -280,68 +280,10 @@ button {
   box-shadow: none !important;
 }
 /* =========================================================
-   GLOBAL TEXT = TPCA GREEN
+   GLOBAL TEXT = TPCA GREEN (CLEAN MASTER)
    ========================================================= */
 
-/* Make all text green by default */
-body,
-ion-content,
-ion-content *,
-p,
-span,
-div,
-ion-label,
-label,
-a {
-  color: var(--tpca-green) !important;
-}
-
-/* Headings slightly stronger */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--tpca-green-dark) !important;
-}
-
-/* ---------------------------------------------------------
-   EXCEPTION: GREEN BACKGROUNDS → WHITE TEXT
-   --------------------------------------------------------- */
-
-/* Primary / solid buttons */
-ion-button.button-solid,
-.btn-primary,
-button[type="submit"] {
-  background: var(--tpca-green) !important;
-  color: #ffffff !important;
-}
-
-/* Any element we explicitly give a green background */
-.bg-green,
-.tpca-green,
-[class*="green"][class*="bg"],
-[class*="button-solid"] {
-  background: var(--tpca-green) !important;
-  color: #ffffff !important;
-}
-
-/* ---------------------------------------------------------
-   KEEP INPUTS READABLE (NOT GREEN TEXT)
-   --------------------------------------------------------- */
-input,
-textarea,
-ion-input,
-ion-textarea {
-  color: var(--tpca-text) !important;
-}
-
-/* Placeholder text */
-input::placeholder,
-textarea::placeholder {
-  color: var(--tpca-muted) !important;
-}
-/* =========================================================
-   FORCE ALL TEXT GREEN (CONTROLLED)
-   ========================================================= */
-
-/* Step 1: Make all text green */
+/* Default text direction */
 body,
 ion-content,
 ion-content *,
@@ -355,20 +297,34 @@ li,
 td,
 th,
 small,
-h1, h2, h3, h4, h5, h6,
 strong,
-b {
+b,
+.core-course-title,
+.course-title,
+h2.item-heading,
+h3.item-heading,
+.core-course-summary,
+.course-summary,
+.item-text-wrap,
+ion-label p,
+.core-link,
+.text-primary {
   color: var(--tpca-green) !important;
 }
 
-/* ---------------------------------------------------------
-   Step 2: OVERRIDES (keep things usable)
-   --------------------------------------------------------- */
+/* Headings stay green too */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--tpca-green) !important;
+}
 
-/* Buttons with green background → white text */
+/* Green background elements must keep white text */
 ion-button.button-solid,
 .btn-primary,
-button[type="submit"] {
+button[type="submit"],
+.bg-green,
+.tpca-green,
+[class*="green"][class*="bg"],
+[class*="button-solid"] {
   color: #ffffff !important;
 }
 
@@ -378,7 +334,7 @@ button[type="submit"] * {
   color: #ffffff !important;
 }
 
-/* Inputs should stay readable (not green) */
+/* Inputs and placeholders stay readable */
 input,
 textarea,
 select,
@@ -387,7 +343,6 @@ ion-textarea {
   color: var(--tpca-text) !important;
 }
 
-/* Placeholder text stays muted */
 input::placeholder,
 textarea::placeholder {
   color: var(--tpca-muted) !important;
