@@ -348,27 +348,77 @@ textarea::placeholder {
   color: var(--tpca-muted) !important;
 }
 /* =========================================================
-   DROPDOWN EDGE FIX
+   MY COURSES FILTER DROPDOWN BUTTON + MENU
+   Targets Bootstrap markup used by Moodle My Courses filter
    ========================================================= */
 
-.core-courses-courses .item-select,
-.core-courses-filter .item-native,
-.core-myoverview ion-select,
-ion-item.item-select {
-  overflow: hidden !important;
-  border-radius: 12px !important;
+/* Outer wrapper */
+.mycourses-filter[data-region="mycourses-filter"] {
+  overflow: visible !important;
 }
 
-.core-courses-courses .item-inner,
-.core-courses-filter .item-inner,
-ion-item.item-select .item-inner {
-  border: none !important;
+/* Closed/open filter button: All / Completed / Not completed */
+.mycourses-filter #mycourses-filter-dropdown,
+#mycourses-filter-dropdown.btn,
+#mycourses-filter-dropdown.btn-outline-secondary,
+#mycourses-filter-dropdown.dropdown-toggle {
+  background: var(--tpca-surface) !important;
+  color: var(--tpca-green) !important;
+  border: 1px solid var(--tpca-border-soft) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  overflow: hidden !important;
+  min-height: 40px !important;
+}
+
+/* Text inside button */
+#mycourses-filter-dropdown span,
+#mycourses-filter-dropdown [data-active-item-text] {
+  color: var(--tpca-green) !important;
+}
+
+/* Dropdown arrow */
+#mycourses-filter-dropdown.dropdown-toggle::after {
+  border-top-color: var(--tpca-green) !important;
+}
+
+/* Open/active/focus states */
+#mycourses-filter-dropdown.show,
+#mycourses-filter-dropdown:focus,
+#mycourses-filter-dropdown:active,
+#mycourses-filter-dropdown:hover {
+  background: var(--tpca-surface) !important;
+  color: var(--tpca-green) !important;
+  border-color: var(--tpca-border-soft) !important;
   box-shadow: none !important;
 }
 
-.core-courses-courses .item-native,
-.core-courses-filter .item-native,
-ion-item.item-select .item-native {
-  border-left: none !important;
-  border-right: none !important;
+/* Dropdown menu panel */
+.mycourses-filter .dropdown-menu {
+  background: var(--tpca-surface) !important;
+  border: 1px solid var(--tpca-border-soft) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+/* Dropdown menu items */
+.mycourses-filter .dropdown-menu .dropdown-item {
+  color: var(--tpca-green) !important;
+  background: var(--tpca-surface) !important;
+}
+
+/* Hover / selected item behavior */
+.mycourses-filter .dropdown-menu .dropdown-item:hover,
+.mycourses-filter .dropdown-menu .dropdown-item:focus,
+.mycourses-filter .dropdown-menu .dropdown-item.active {
+  color: var(--tpca-green) !important;
+  background: var(--tpca-bg-light) !important;
+  font-weight: 600 !important;
+}
+
+/* Divider */
+.mycourses-filter .dropdown-divider {
+  border-top-color: var(--tpca-border-soft) !important;
 }
