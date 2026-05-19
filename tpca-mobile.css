@@ -526,3 +526,43 @@ textarea::placeholder {
 .mycourses-sort .dropdown-divider {
   border-top-color: var(--tpca-border-soft) !important;
 }
+
+/* =========================================================
+   MY COURSES DROPDOWN CLOSED-BOX FIX
+   Force All / Completed / Sort controls to render as one box
+   ========================================================= */
+
+[data-region="mycourses-filter"] .dropdown-toggle,
+[data-region="mycourses-sort"] .dropdown-toggle,
+.mycourses-filter .dropdown-toggle,
+.mycourses-sort .dropdown-toggle {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.35rem !important;
+  min-height: 40px !important;
+  padding: 0.45rem 0.85rem !important;
+  line-height: 1.2 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background-clip: padding-box !important;
+}
+
+/* Remove inner split-line look */
+[data-region="mycourses-filter"] .dropdown-toggle span,
+[data-region="mycourses-sort"] .dropdown-toggle span,
+.mycourses-filter .dropdown-toggle span,
+.mycourses-sort .dropdown-toggle span {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Make dropdown arrow part of the same control */
+[data-region="mycourses-filter"] .dropdown-toggle::after,
+[data-region="mycourses-sort"] .dropdown-toggle::after,
+.mycourses-filter .dropdown-toggle::after,
+.mycourses-sort .dropdown-toggle::after {
+  margin-left: 0.35rem !important;
+  border-top-color: var(--tpca-green) !important;
+}
