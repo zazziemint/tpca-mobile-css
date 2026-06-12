@@ -487,6 +487,6 @@ button#mycourses-filter-dropdown.btn.btn-outline-secondary.dropdown-toggle::afte
   border-top-color: var(--tpca-green) !important;
 }
 /* Test */
-* {
-    border: 2px solid red !important;
+.course-progress {
+    background: red !important;
 }
