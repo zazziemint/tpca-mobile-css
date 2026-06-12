@@ -445,3 +445,44 @@ button#mycourses-filter-dropdown.btn.btn-outline-secondary.dropdown-toggle::afte
   color: var(--tpca-green) !important;
   border-top-color: var(--tpca-green) !important;
 }
+/* =========================================================
+   MY COURSES FILTER BUTTON - FULL OUTLINE REPAIR
+   Goal: make All/Completed render as one complete rounded box
+   ========================================================= */
+
+#mycourses-filter-dropdown {
+  border: 1px solid var(--tpca-green) !important;
+  border-radius: 0.75rem !important;
+  background-color: var(--tpca-surface) !important;
+  color: var(--tpca-green) !important;
+  box-shadow: none !important;
+  outline: none !important;
+  overflow: visible !important;
+  background-clip: border-box !important;
+}
+
+/* force all button states to keep same complete outline */
+#mycourses-filter-dropdown.show,
+#mycourses-filter-dropdown:hover,
+#mycourses-filter-dropdown:focus,
+#mycourses-filter-dropdown:active {
+  border: 1px solid var(--tpca-green) !important;
+  background-color: var(--tpca-surface) !important;
+  color: var(--tpca-green) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* make the inner label stop creating visual edge artifacts */
+#mycourses-filter-dropdown span,
+#mycourses-filter-dropdown [data-active-item-text] {
+  color: var(--tpca-green) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* dropdown arrow */
+#mycourses-filter-dropdown::after {
+  border-top-color: var(--tpca-green) !important;
+}
